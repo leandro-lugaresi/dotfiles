@@ -1,0 +1,134 @@
+{
+  "editor.rulers": [80, 120],
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.trimAutoWhitespace": true,
+  "editor.detectIndentation": false,
+  "editor.tabCompletion": "on",
+  "editor.renderIndentGuides": false,
+  "editor.minimap.enabled": true,
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 13,
+  "explorer.openEditors.visible": 0,
+  "explorer.confirmDragAndDrop": false,
+  "window.restoreWindows": "none",
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "window.zoomLevel": 0,
+  "files.autoSave": "off",
+  "files.trimTrailingWhitespace": true,
+  "go.coverOnSave": true,
+  "go.testOnSave": true,
+  "go.coverageDecorator": {
+    "type": "gutter"
+  },
+  "go.formatTool": "goimports",
+  "go.formatFlags": ["-s", "-w"],
+  "go.buildFlags": ["-v"],
+  "go.lintTool": "golangci-lint",
+  "go.docsTool": "guru",
+  "go.useLanguageServer": true,
+  "go.languageServerExperimentalFeatures": {
+    "diagnostics": true, // for build and vet errors as you type
+    "findReferences": true, // for finding in-package references
+    "format": false // gofumpt is responsible for formating
+  },
+  "go.alternateTools": {
+    "gofmt": "gofumpt",
+    "goimports": "gofumports"
+  },
+  "files.eol": "\n",
+  "workbench.editor.showIcons": true,
+  "workbench.startupEditor": "none",
+  "extensions.ignoreRecommendations": true,
+  "extensions.autoUpdate": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "/vendor": true
+  },
+  "terminal.integrated.fontFamily": "'Hack Nerd Font','Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "terminal.external.linuxExec": "alacritty",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableCommitSigning": true,
+  "[go]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false,
+    "editor.snippetSuggestions": "bottom",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "[json]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[ruby]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[properties]": {
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": false
+  },
+  "gitlens.keymap": "alternate",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "explorer.confirmDelete": false,
+  "workbench.sideBar.location": "right",
+  "breadcrumbs.enabled": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "terminal.integrated.rendererType": "experimentalWebgl",
+  "html.format.endWithNewline": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.renderControlCharacters": false,
+  "workbench.colorTheme": "Monochrome Dark",
+  "liveshare.audio.joinCallBehavior": "accept",
+  "git.suggestSmartCommit": false,
+  "vscode-neovim.neovimPath": "/usr/bin/nvim",
+  "workbench.activityBar.visible": false,
+  "workbench.preferredDarkColorTheme": "Cyberpunk",
+  "workbench.preferredLightColorTheme": "Better Solarized Light",
+  "workbench.statusBar.visible": true,
+  "zenMode.hideLineNumbers": false,
+  "window.restoreFullscreen": true,
+  "editor.minimap.maxColumn": 100,
+  "editor.renderLineHighlight": "gutter",
+  "vscode-neovim.mouseSelectionStartVisualMode": true,
+  "window.menuBarVisibility": "toggle",
+  "beautify.language": {
+    "js": {
+      "type": ["javascript", "json", "jsonc"],
+      "filename": [".jshintrc", ".jsbeautifyrc"]
+    },
+    "css": ["css", "less", "scss"],
+    "html": ["htm", "html"]
+  },
+  "colorize.languages": [
+    "plaintext",
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg",
+    "ini",
+    "yaml"
+  ]
+}

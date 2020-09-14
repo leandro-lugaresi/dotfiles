@@ -1,0 +1,70 @@
+[difftool "diffmerge"]
+	cmd = diffmerge $LOCAL $REMOTE
+[alias]
+	co = checkout
+	count = shortlog -sn
+	lc = add-rm-line-count
+	g = grep --break --heading --line-number
+	gi = grep --break --heading --line-number -i
+	changed = show --pretty=\"format:\" --name-only
+	fm = fetch-merge
+	pr = open-pr
+	please = push --force-with-lease
+	commend = commit --amend --no-edit
+	fpr = fetch-pr
+	lt = log --tags --decorate --simplify-by-decoration --oneline
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+	compression = -1
+	autocrlf = input
+	whitespace = trailing-space,space-before-tab
+	precomposeunicode = true
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[apply]
+	whitespace = nowarn
+[help]
+	autocorrect = 1
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = true
+	keepBackup = false
+[diff]
+	tool = diffmerge
+[difftool]
+	prompt = false
+[grep]
+	extendRegexp = true
+	lineNumber = true
+[push]
+	default = simple
+[submodule]
+	fetchJobs = 4
+[commit]
+[log]
+	showSignature = false
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
+    pushInsteadOf = "https://github.com/"
+
+[url "git://github.com/"]
+    insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+    pushInsteadOf = "gist:"
+    pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+    insteadOf = "gist:"

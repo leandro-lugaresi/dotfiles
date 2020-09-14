@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=oomox-pink-nord
+Comment=A Material Design theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=oomox-pink-nord
+MetacityTheme=oomox-pink-nord
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24

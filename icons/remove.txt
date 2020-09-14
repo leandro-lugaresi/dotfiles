@@ -1,0 +1,11 @@
+oomox-pink-nord/48x48/apps/rssowl.svg
+oomox-pink-nord/48x48/apps/feedreader.svg
+oomox-pink-nord/48x48/apps/com.github.rssguard.svg
+oomox-pink-nord/48x48/apps/adobe-air.svg
+oomox-pink-nord/48x48/apps/rss_indicator.svg
+oomox-pink-nord/48x48/apps/org.gnome.FeedReader.svg
+oomox-pink-nord/48x48/apps/kde-gtk-config.svg
+oomox-pink-nord/48x48/apps/preferences-gtk-config.svg
+oomox-pink-nord/48x48/apps/air.svg
+oomox-pink-nord/48x48/apps/rssguard.svg
+oomox-pink-nord/48x48/apps/akregator.svg

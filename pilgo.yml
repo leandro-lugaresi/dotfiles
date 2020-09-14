@@ -1,0 +1,44 @@
+targets:
+  - bashrc
+  - editorconfig
+  - gitconfig.local
+  - gitignore
+  - scripts
+  - tmg
+  - tmux.conf.local
+  - vscode
+  - omf
+  - themes
+  - icons
+options:
+  bashrc:
+    link: .bashrc
+    useHome: true
+  editorconfig:
+    link: .editorconfig
+    useHome: true
+  gitconfig.local:
+    link: .gitconfig.local
+    useHome: true
+  gitignore:
+    link: .gitignore
+    useHome: true
+  omf:
+    targets:
+      - bundle
+      - channel
+      - theme
+  scripts:
+    link: .scripts
+    useHome: true
+  tmux.conf.local:
+    link: .tmux.conf.local
+    useHome: true
+  vscode:
+    link: Code/User
+  themes:
+    link: .themes
+    useHome: true
+  icons:
+    link: .icons
+    useHome: true

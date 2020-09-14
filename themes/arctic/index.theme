@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=arctic
+Comment=A Material Design theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=arctic
+MetacityTheme=arctic
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24

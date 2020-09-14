@@ -1,0 +1,6 @@
+home: /home/leandro
+theme_path: /home/leandro/.config/tmg/themes
+base_path: /home/leandro/.config/tmg/base
+theme_active: mono
+reload_commands:
+- killall -HUP xsettingsd
