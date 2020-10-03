@@ -28,6 +28,7 @@ options:
       - bundle
       - channel
       - theme
+      - init.fish
   scripts:
     link: .scripts
     useHome: true

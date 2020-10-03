@@ -136,6 +136,18 @@ bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
+# workspace default monitors
+workspace $ws1 output primary
+workspace $ws2 output primary
+workspace $ws3 output secondary
+workspace $ws4 output primary
+workspace $ws5 output primary
+workspace $ws6 output secondary
+workspace $ws7 output secondary
+workspace $ws8 output secondary
+workspace $ws9 output secondary
+workspace $ws10 output secondary
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -175,8 +187,8 @@ bindsym XF86KbdBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86KbdBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 # xrandr
-#exec_always --no-startup-id xrandr --output eDP1 --mode 1366x768 --pos 0x512
-#exec --no-startup-id xrandr --output HDMI1 --mode 1920x1080 --pos 1366x0 --rotate left
+bindsym $mod+m         exec xrandr --output eDP1 --mode 1366x768 --pos 277x1080 --rotate normal --primary --output HDMI1 --off
+bindsym $mod+shift+m   exec xrandr --output eDP1 --mode 1366x768 --pos 277x1080 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
 #bindsym $mod+p exec --no-startup-id xrandr --output HDMI1 --mode 1920x1080 --pos 1366x0 --rotate left && feh --bg-fill ~/Pictures/wallpapers/*
 #bindsym $mod+Shift+p exec --no-startup-id xrandr --output HDMI1 --mode 1920x1080 --right-of eDP1 --rotate normal && feh --bg-fill ~/Pictures/wallpapers/*
@@ -184,5 +196,12 @@ bindsym XF86KbdBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 #bindsym $mod+mod1+Shift+p exec --no-startup-id xrandr --output HDMI1 --mode 1360x850 --right-of eDP1 --rotate normal --pos 0x0 && feh --bg-fill ~/Pictures/wallpapers/*
 
 # theme selector
-
 bindsym $mod+Shift+t exec --no-startup-id ~/.scripts/select_theme.sh
+
+assign [class=firefox|Transmission-gtk] 1
+assign [class=Slack|Discord] 2
+assign [class=code] 3
+assign [class=Alacritty] 4
+assign [class=Stremio|Spotify] 5
+assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 7
+assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Exo-helper*|Lxrandr|Arandr] 8

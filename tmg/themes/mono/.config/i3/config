@@ -13,9 +13,6 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 #Dunst
 exec_always --no-startup-id dunst
 
-# Background
-# exec_always feh --bg-fill /home/safin/.config/img/dark.jpg
-
 # Borders
 for_window [class="^.*"] border pixel 0
 
@@ -25,6 +22,3 @@ gaps outer 0
 
 # Rofi
 bindsym $mod+d exec rofi -show run
-
-# Screenshot
-bindsym Print exec SCR_DIR='/home/safin/Pictures' scr -S

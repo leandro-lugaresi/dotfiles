@@ -1,9 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/leandro/.config/fish/functions'
+let g:netrw_dirhist_0='/home/leandro/dev/el/gordon/cmd/gordon'
+let g:netrw_dirhist_9='/home/leandro/dev/el/gordon/cmd'
+let g:netrw_dirhist_8='/home/leandro/dev/el/gordon'
 let g:netrw_dirhist_7='/home/leandro/.themes/oomox-pink-nord'
 let g:netrw_dirhist_6='/home/leandro/.dotfiles/tmg/themes/pi/.config/polybar'
 let g:netrw_dirhist_5='/home/leandro/.dotfiles/tmg/themes/pi/.config'
 let g:netrw_dirhist_4='/home/leandro/.dotfiles/tmg/themes/pi'
 let g:netrw_dirhist_3='/home/leandro/dev/bbbot/node_modules'
 let g:netrw_dirhist_2='/home/leandro/dev/bbbot'
-let g:netrw_dirhist_1='/home/leandro/dev/el/el'
