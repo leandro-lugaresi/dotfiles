@@ -10,6 +10,7 @@ targets:
   - omf
   - themes
   - icons
+  - fonts
 options:
   bashrc:
     link: .bashrc
@@ -42,4 +43,7 @@ options:
     useHome: true
   icons:
     link: .icons
+    useHome: true
+  fonts:
+    link: .fonts
     useHome: true

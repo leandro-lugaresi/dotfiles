@@ -19,6 +19,8 @@ for_window [class="^.*"] border pixel 0
 # Gaps
 gaps inner 20
 gaps outer 0
+gaps bottom 20
+gaps top 20
 
 # Rofi
 bindsym $mod+d exec rofi -show run
