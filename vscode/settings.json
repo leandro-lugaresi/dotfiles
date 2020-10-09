@@ -27,9 +27,7 @@
   "go.docsTool": "guru",
   "go.useLanguageServer": true,
   "go.languageServerExperimentalFeatures": {
-    "diagnostics": true, // for build and vet errors as you type
-    "findReferences": true, // for finding in-package references
-    "format": false // gofumpt is responsible for formating
+    "diagnostics": true // for build and vet errors as you type
   },
   "go.alternateTools": {
     "gofmt": "gofumpt",
@@ -138,5 +136,19 @@
   "workbench.editor.untitled.labelFormat": "name",
   "window.autoDetectColorScheme": true,
   "editor.minimap.enabled": false,
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": false,
+  "vim.hlsearch": true,
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-n>": false,
+    "<C-x>": false
+  }
 }
