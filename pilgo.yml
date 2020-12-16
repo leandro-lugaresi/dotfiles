@@ -11,6 +11,7 @@ targets:
   - themes
   - icons
   - fonts
+  - cargo
 options:
   bashrc:
     link: .bashrc
@@ -40,6 +41,9 @@ options:
     link: Code/User
   themes:
     link: .themes
+    useHome: true
+  cargo:
+    link: .cargo
     useHome: true
   icons:
     link: .icons

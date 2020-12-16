@@ -1,0 +1,52 @@
+[alias] # command aliases
+b = "build"
+c = "check"
+r = "run"
+rr = "run --release"
+space_example = ["run", "--release", "--", "\"command list\""]
+t = "test"
+
+# [build]
+# jobs = 1                  # number of parallel jobs, defaults to # of CPUs
+# rustc = "rustc"           # the rust compiler tool
+# rustc-wrapper = "…"       # run this wrapper instead of `rustc`
+# rustdoc = "rustdoc"       # the doc generator tool
+# target = "triple"         # build for the target triple (ignored by `cargo install`)
+# target-dir = "target"     # path of where to place all generated artifacts
+# rustflags = ["…", "…"]    # custom flags to pass to all compiler invocations
+# rustdocflags = ["…", "…"] # custom flags to pass to rustdoc
+# incremental = true        # whether or not to enable incremental compilation
+# dep-info-basedir = "…"    # path for the base directory for targets in depfiles
+# pipelining = true         # rustc pipelining
+
+[cargo-new]
+email = "leandrolugaresi92@gmail.com" # email address to use in `authors` field
+name = "Leandro Lugaresi" # name to use in `authors` field
+vcs = "git" # VCS to use ('git', 'hg', 'pijul', 'fossil', 'none')
+
+# [http]
+# debug = false               # HTTP debugging
+# proxy = "host:port"         # HTTP proxy in libcurl format
+# ssl-version = "tlsv1.3"     # TLS version to use
+# ssl-version.max = "tlsv1.3" # maximum TLS version
+# ssl-version.min = "tlsv1.1" # minimum TLS version
+# timeout = 30                # timeout for each HTTP request, in seconds
+# low-speed-limit = 10        # network timeout threshold (bytes/sec)
+# cainfo = "cert.pem"         # path to Certificate Authority (CA) bundle
+# check-revoke = true         # check for SSL certificate revocation
+# multiplexing = true         # HTTP/2 multiplexing
+# user-agent = "…"            # the user-agent header
+
+# [install]
+# root = "/some/path"         # `cargo install` destination directory
+
+[net]
+git-fetch-with-cli = true # use the `git` executable for git operations
+offline = false # do not access the network
+retry = 2 # network retries
+
+[term]
+color = 'auto' # whether cargo colorizes output
+progress.when = 'auto' # whether cargo shows progress bar
+progress.width = 80 # width of progress bar
+verbose = true # whether cargo provides verbose output
