@@ -150,5 +150,11 @@
     "<C-v>": false,
     "<C-n>": false,
     "<C-x>": false
+  },
+  "ruby.format": "rubocop",
+  "ruby.useBundler": false,
+  "ruby.useLanguageServer": true,
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   }
 }
