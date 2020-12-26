@@ -1,15 +1,9 @@
-#!/bin/sh
-test -d /usr/share/fzf || return 0
+#!/usr/bin/env fish
 
-export FZF_COMPLETION_TRIGGER='**'
-# shellcheck disable=SC1091
-. /usr/share/fzf/completion.zsh
-# shellcheck disable=SC1091
-. /usr/share/fzf/key-bindings.zsh
+set -Ux FZF_COMPLETION_TRIGGER "**"
+set -Ux FZF_DEFAULT_COMMAND='fd --type f'
 
-export FZF_DEFAULT_COMMAND='fd --type f'
-
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS"
+set -Uxa FZF_DEFAULT_OPTS "
 --preview '[[  \$(file --mime {}) =~ binary ]] &&
                  echo {} is a binary file ||
                  (bat --style=numbers --color=always {} ||
