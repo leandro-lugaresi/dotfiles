@@ -18,6 +18,9 @@ exec --no-startup-id nm-applet
 
 exec --no-startup-id xsettingsd &
 
+# Fix authentication problems with pacman-manager and i3 sessions
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -29,14 +32,14 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-set $myTerm alacritty
+set $myTerm "alacritty"
 bindsym $mod+Return exec --no-startup-id $myTerm
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-#Nitrogen
-exec --no-startup-id nitrogen --restore
+# initial wallpaper
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/*
 
 # start the basic dmenu (a program launcher)
 bindsym $mod+Shift+d exec --no-startup-id rofi -show drun
@@ -91,6 +94,10 @@ bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+l workspace next
 bindsym $mod+Ctrl+h workspace prev
 
+# move focused workspace between monitors
+bindsym $mod+Ctrl+Up move workspace to output right
+bindsym $mod+Ctrl+Down move workspace to output left
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -137,16 +144,19 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # workspace default monitors
-workspace $ws1 output primary
-workspace $ws2 output primary
-workspace $ws3 output secondary
-workspace $ws4 output primary
-workspace $ws5 output primary
-workspace $ws6 output secondary
-workspace $ws7 output secondary
-workspace $ws8 output secondary
-workspace $ws9 output secondary
-workspace $ws10 output secondary
+set $primary "HDMI1"
+set $secondary "eDP1"
+
+workspace $ws1 output $primary
+workspace $ws2 output $primary
+workspace $ws3 output $secondary
+workspace $ws4 output $primary
+workspace $ws5 output $primary
+workspace $ws6 output $secondary
+workspace $ws7 output $secondary
+workspace $ws8 output $secondary
+workspace $ws9 output $secondary
+workspace $ws10 output $secondary
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -186,9 +196,15 @@ bindsym $mod+r mode "resize"
 bindsym XF86KbdBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86KbdBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
+# Print
+bindsym --release Print exec gnome-screenshot
+bindsym --release Shift+Print exec gnome-screenshot -c
+bindsym --release Ctrl+Print exec gnome-screenshot -a
+bindsym --release Ctrl+Shift+Print exec gnome-screenshot -a -c
+
 # xrandr
-bindsym $mod+m         exec xrandr --output eDP1 --mode 1366x768 --pos 277x1080 --rotate normal --primary --output HDMI1 --off
-bindsym $mod+shift+m   exec xrandr --output eDP1 --mode 1366x768 --pos 277x1080 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+bindsym $mod+m         exec xrandr --output eDP1 --mode 1366x768 --pos 277x1080 --rotate normal --primary --output HDMI1 --off && feh --bg-fill ~/Pictures/wallpapers/*
+bindsym $mod+shift+m   exec xrandr --output eDP1 --mode 1366x768 --pos 277x1080 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off && nitrogen --restore
 
 #bindsym $mod+p exec --no-startup-id xrandr --output HDMI1 --mode 1920x1080 --pos 1366x0 --rotate left && feh --bg-fill ~/Pictures/wallpapers/*
 #bindsym $mod+Shift+p exec --no-startup-id xrandr --output HDMI1 --mode 1920x1080 --right-of eDP1 --rotate normal && feh --bg-fill ~/Pictures/wallpapers/*
@@ -203,5 +219,5 @@ assign [class=Slack|Discord] 2
 assign [class=code] 3
 assign [class=Alacritty] 4
 assign [class=Stremio|Spotify] 5
-assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 7
+assign [class=zoom|Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 7
 assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Exo-helper*|Lxrandr|Arandr] 8
