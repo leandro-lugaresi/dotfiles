@@ -12,6 +12,7 @@ targets:
   - icons
   - fonts
   - cargo
+  - tug
 options:
   bashrc:
     link: .bashrc
