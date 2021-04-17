@@ -95,8 +95,8 @@ bindsym $mod+Ctrl+l workspace next
 bindsym $mod+Ctrl+h workspace prev
 
 # move focused workspace between monitors
-bindsym $mod+Ctrl+Up move workspace to output right
-bindsym $mod+Ctrl+Down move workspace to output left
+bindsym $mod+Ctrl+Up move workspace to output up
+bindsym $mod+Ctrl+Down move workspace to output down
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -205,6 +205,7 @@ bindsym --release Ctrl+Shift+Print exec gnome-screenshot -a -c
 # xrandr
 bindsym $mod+m         exec xrandr --output eDP1 --mode 1366x768 --pos 277x1080 --rotate normal --primary --output HDMI1 --off && feh --bg-fill ~/Pictures/wallpapers/*
 bindsym $mod+shift+m   exec xrandr --output eDP1 --mode 1366x768 --pos 277x1080 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off && nitrogen --restore
+bindsym $mod+Ctrl+m   exec xrandr --output eDP1 --off --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off && nitrogen --restore
 
 #bindsym $mod+p exec --no-startup-id xrandr --output HDMI1 --mode 1920x1080 --pos 1366x0 --rotate left && feh --bg-fill ~/Pictures/wallpapers/*
 #bindsym $mod+Shift+p exec --no-startup-id xrandr --output HDMI1 --mode 1920x1080 --right-of eDP1 --rotate normal && feh --bg-fill ~/Pictures/wallpapers/*

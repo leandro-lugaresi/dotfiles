@@ -12,7 +12,6 @@
   "explorer.confirmDragAndDrop": false,
   "window.restoreWindows": "none",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "window.zoomLevel": 0,
   "files.autoSave": "off",
   "files.trimTrailingWhitespace": true,
   "go.coverOnSave": true,
@@ -39,8 +38,10 @@
   "extensions.ignoreRecommendations": true,
   "extensions.autoUpdate": true,
   "search.exclude": {
-    "**/node_modules": true,
+    "**/*.lock": true,
+    "**/**/node_modules": true,
     "**/bower_components": true,
+    "**/node_modules": true,
     "/vendor": true
   },
   "terminal.integrated.fontFamily": "'Hack Nerd Font','Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
@@ -60,6 +61,13 @@
   "[json]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[graphql]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
@@ -88,28 +96,22 @@
   "terminal.integrated.rendererType": "experimentalWebgl",
   "html.format.endWithNewline": true,
   "[jsonc]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.renderControlCharacters": false,
-  "workbench.colorTheme": "LaserWave",
+  "workbench.colorTheme": "Gruvbox Light Hard",
   "liveshare.audio.joinCallBehavior": "accept",
   "git.suggestSmartCommit": false,
   "vscode-neovim.neovimPath": "/usr/bin/nvim",
-  "workbench.activityBar.visible": false,
   "workbench.preferredDarkColorTheme": "Monochrome Dark Amplified",
   "workbench.preferredLightColorTheme": "Monochrome Light Amplified",
-  "workbench.statusBar.visible": true,
   "zenMode.hideLineNumbers": false,
   "window.restoreFullscreen": true,
   "editor.minimap.maxColumn": 100,
   "editor.renderLineHighlight": "gutter",
   "vscode-neovim.mouseSelectionStartVisualMode": true,
-  "window.menuBarVisibility": "toggle",
   "beautify.language": {
-    "js": {
-      "type": ["javascript", "json", "jsonc"],
-      "filename": [".jshintrc", ".jsbeautifyrc"]
-    },
     "css": ["css", "less", "scss"],
     "html": ["htm", "html"]
   },
@@ -135,7 +137,6 @@
   "workbench.editor.showTabs": false,
   "workbench.editor.untitled.labelFormat": "name",
   "window.autoDetectColorScheme": true,
-  "editor.minimap.enabled": false,
   "files.insertFinalNewline": true,
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -156,5 +157,21 @@
   "ruby.useLanguageServer": true,
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  }
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "terminal.integrated.shell.linux": "/bin/fish",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.activityBar.visible": false,
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  "window.menuBarVisibility": "toggle"
 }
